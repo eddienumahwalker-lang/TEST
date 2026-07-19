@@ -6,7 +6,7 @@ function Hello() {
     return (
         <div>
             <h2>Hello, World!</h2>
-            {/* Render the Message component inside Hello */}
+            { Render the Message component inside Hello }
             <Message />
         </div>
     );
