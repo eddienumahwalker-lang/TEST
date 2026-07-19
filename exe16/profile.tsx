@@ -7,7 +7,6 @@ import {
   combineReducers
 } from '@reduxjs/toolkit';
 
-// =========
 export interface GitHubUser {
   id: number;
   name: string;
@@ -49,7 +48,6 @@ const counterSlice = createSlice({
   }
 });
 
-// Todos Slice
 export interface Todo {
   id: string;
   title: string;
@@ -100,7 +98,6 @@ const usersSlice = createSlice({
       })
       .addCase(fetchUser.fulfilled, (state, action: PayloadAction<GitHubUser>) => {
         state.loading = false;
-        // Prevent adding duplicate profiles
         if (!state.list.some(u => u.id === action.payload.id)) {
           state.list.push(action.payload);
         }
